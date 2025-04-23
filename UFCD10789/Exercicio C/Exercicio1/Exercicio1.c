@@ -1,24 +1,17 @@
 #include <stdio.h>
 
-void converter_tempo(int total_segundos) {
-    int horas;
-    int resto_apos_horas;
-    int minutos;
-    int segundos;
-
-    horas = total_segundos / 3600;
-    resto_apos_horas = total_segundos % 3600;
-    minutos = resto_apos_horas / 60;
-    segundos = resto_apos_horas % 60;
-
-    printf("%d horas, %d minutos e %d segundos\n", horas, minutos, segundos);
-}
 int main() {
-    int entrada_segundos;
+    int total_segundos, horas, minutos, segundos;
 
     printf("Insira o tempo em segundos: ");
-    scanf("%d", &entrada_segundos);
+    scanf("%d", &total_segundos);
 
-    converter_tempo(entrada_segundos);
+    horas = total_segundos / 3600; // 1 hora = 3600 segundos
+    total_segundos = total_segundos % 3600; 
+    minutos = total_segundos / 60; // 1 minuto = 60 segundos
+    segundos = total_segundos % 60;
+
+    printf("%d segundos correspondem a %d horas, %d minutos e %d segundos.\n", total_segundos, horas, minutos, segundos);
+
     return 0;
 }
