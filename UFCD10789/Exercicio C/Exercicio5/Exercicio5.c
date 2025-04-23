@@ -3,6 +3,7 @@
 int main() {
 
     int Num1, Num2, Num3;
+ 
     printf("Insira o primeiro valor: ");
     scanf("%d", &Num1);
     printf("Insira o segundo valor: ");
