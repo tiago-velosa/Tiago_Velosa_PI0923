@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int total_segundos, horas, minutos, segundos;
+    int total_segundos=0, horas=0, minutos=0, segundos=0;
 
     printf("Insira o tempo em segundos: ");
     scanf("%d", &total_segundos);
